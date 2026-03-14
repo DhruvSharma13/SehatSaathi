@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #2563eb;
+  --color-secondary: #10b981;
+  --color-dark: #0f172a;
+  --color-light: #f8fafc;
+}
+
+body {
+  background-color: var(--color-light);
+  color: var(--color-dark);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+@utility glass {
+  background-color: rgb(255 255 255 / 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgb(255 255 255 / 0.2);
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+@keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@utility animate-fade-in-up {
+  animation: fade-in-up 0.5s ease-out forwards;
+}
